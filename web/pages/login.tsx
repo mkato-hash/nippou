@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import styles from '../styles/auth.module.css';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
+const API_BASE_URL = '/api';
 
 type UserRole = 'TRAINEE' | 'MENTOR' | null;
 

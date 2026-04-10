@@ -4,7 +4,7 @@ import axios from 'axios';
 import Link from 'next/link';
 import styles from '../styles/dashboard.module.css';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
+const API_BASE_URL = '/api';
 
 interface Report {
   id: string;
