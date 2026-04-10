@@ -4,7 +4,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import styles from '../../styles/submit.module.css';
 
-const API_BASE_URL = '/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api';
 
 export default function SubmitReport() {
   const router = useRouter();
