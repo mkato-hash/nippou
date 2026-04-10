@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: daily-report-backend
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: "file:./dev.db"
+      JWT_SECRET: "your_jwt_secret_key_here"
+      PORT: 3000
+      NODE_ENV: "development"
+    volumes:
+      - ./backend:/app
+      - /app/node_modules
+    networks:
+      - daily-report-network
+    command: npm run dev
+
+  web:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: daily-report-web
+    ports:
+      - "3002:3000"
+    environment:
+      NEXT_PUBLIC_API_URL: "http://localhost:3000/api"
+    volumes:
+      - ./web:/app
+      - /app/node_modules
+    networks:
+      - daily-report-network
+    command: npm run dev
+    depends_on:
+      - backend
+
+  analytics:
+    build:
+      context: ./analytics
+      dockerfile: Dockerfile
+    container_name: daily-report-analytics
+    ports:
+      - "3001:3001"
+    environment:
+      API_BASE_URL: "http://backend:3000/api"
+      JWT_SECRET: "your_jwt_secret_key_here"
+    volumes:
+      - ./analytics:/app
+    networks:
+      - daily-report-network
+    depends_on:
+      - backend
+
+networks:
+  daily-report-network:
+    driver: bridge

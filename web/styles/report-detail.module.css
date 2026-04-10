@@ -1,0 +1,362 @@
+.container {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 28px;
+  margin: 0 0 8px 0;
+  color: #333;
+}
+
+.backLink {
+  color: #007aff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.backLink:hover {
+  color: #0051cc;
+  text-decoration: underline;
+}
+
+.content {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.loadingMessage {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+.errorMessage {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c33;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 40px;
+  text-align: center;
+}
+
+.reportCard {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.reportHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.reportHeader h2 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.email {
+  margin: 0;
+  font-size: 13px;
+  color: #999;
+}
+
+.reportMeta {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.date {
+  font-size: 13px;
+  color: #999;
+}
+
+.readBadge {
+  background-color: #4caf50;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.reportContent {
+  margin: 30px 0;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h3 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.section p {
+  margin: 0;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.returnButton {
+  padding: 12px 24px;
+  background-color: #007aff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.returnButton:hover {
+  background-color: #0051cc;
+}
+
+.commentsSection {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #eee;
+}
+
+.commentsTitle {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.commentsList {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.comment {
+  background: #f9f9f9;
+  border-left: 3px solid #007aff;
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.commentHeader {
+  margin-bottom: 8px;
+}
+
+.commentDate {
+  font-size: 12px;
+  color: #999;
+}
+
+.commentContent {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.commentInput {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s;
+}
+
+.commentInput:focus {
+  outline: none;
+  border-color: #007aff;
+  box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1);
+}
+
+.commentInput:disabled {
+  background-color: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.commentButton {
+  padding: 12px 24px;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.commentButton:hover:not(:disabled) {
+  background-color: #0051cc;
+}
+
+.commentButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .header {
+    padding: 16px;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .header h1 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .backLink {
+    font-size: 13px;
+  }
+
+  .content {
+    padding: 16px;
+    max-width: 100%;
+  }
+
+  .reportCard {
+    padding: 16px;
+  }
+
+  .reportHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+  }
+
+  .reportHeader h2 {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+
+  .email {
+    font-size: 12px;
+  }
+
+  .reportMeta {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 8px;
+    gap: 8px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  .reportContent {
+    margin: 20px 0;
+  }
+
+  .section {
+    margin-bottom: 16px;
+  }
+
+  .section h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .section p {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .footer {
+    padding-top: 20px;
+  }
+
+  .returnButton {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .loadingMessage,
+  .errorMessage {
+    padding: 40px 16px;
+    margin: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    padding: 24px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .content {
+    padding: 24px;
+    max-width: 100%;
+  }
+
+  .reportCard {
+    padding: 25px;
+  }
+
+  .reportHeader h2 {
+    font-size: 22px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+}
