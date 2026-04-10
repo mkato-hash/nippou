@@ -63,6 +63,9 @@ export default function LoginPage() {
     return (
       <div className={styles.roleSelectionContainer}>
         <div className={styles.roleSelectionCard}>
+          <div className={styles.logoContainer}>
+            <img src="/logo.png" alt="ロゴ" className={styles.logo} />
+          </div>
           <h1 className={styles.roleTitle}>日報管理システム</h1>
           <p className={styles.roleSubtitle}>ログインする方を選択してください</p>
 
@@ -100,6 +103,9 @@ export default function LoginPage() {
   return (
     <div className={containerClassName}>
       <div className={cardClassName}>
+        <div className={styles.logoContainer}>
+          <img src="/logo.png" alt="ロゴ" className={styles.logoSmall} />
+        </div>
         <button
           onClick={() => setRole(null)}
           className={styles.backToRoleButton}

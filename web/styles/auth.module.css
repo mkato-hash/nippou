@@ -16,6 +16,25 @@
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
   width: 100%;
   max-width: 500px;
+  text-align: center;
+}
+
+.logoContainer {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+  max-width: 100%;
+}
+
+.logoSmall {
+  height: 60px;
+  width: auto;
+  max-width: 100%;
 }
 
 .roleTitle {

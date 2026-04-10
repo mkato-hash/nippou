@@ -86,11 +86,14 @@ export default function TraineeDashboard() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div>
-          <h1>ダッシュボード</h1>
-          <p className={styles.welcome}>
-            {user && `${user.name}さん、こんにちは`}
-          </p>
+        <div className={styles.headerLeft}>
+          <img src="/logo.png" alt="ロゴ" className={styles.headerLogo} />
+          <div>
+            <h1>ダッシュボード</h1>
+            <p className={styles.welcome}>
+              {user && `${user.name}さん、こんにちは`}
+            </p>
+          </div>
         </div>
         <button
           className={styles.logoutButton}

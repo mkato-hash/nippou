@@ -107,9 +107,12 @@ export default function DashboardPage() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
-        <div>
-          <h1>日報管理ダッシュボード</h1>
-          <p>こんにちは、{userName}さん</p>
+        <div className={styles.headerLeft}>
+          <img src="/logo.png" alt="ロゴ" className={styles.headerLogo} />
+          <div>
+            <h1>日報管理ダッシュボード</h1>
+            <p>こんにちは、{userName}さん</p>
+          </div>
         </div>
         <button onClick={handleLogout} className={styles.logoutBtn}>
           ログアウト
