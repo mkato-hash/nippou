@@ -71,11 +71,14 @@ export default function ReportHistory() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div>
-          <h1>過去の日報</h1>
-          <Link href="/trainee/submit" className={styles.backLink}>
-            ← 新しい日報を提出する
-          </Link>
+        <div className={styles.headerLeft}>
+          <img src="/logo.png" alt="ロゴ" className={styles.headerLogo} />
+          <div>
+            <h1>過去の日報</h1>
+            <Link href="/trainee/submit" className={styles.backLink}>
+              ← 新しい日報を提出する
+            </Link>
+          </div>
         </div>
         <button
           className={styles.logoutButton}

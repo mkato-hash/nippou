@@ -135,11 +135,14 @@ export default function ReportDetail() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div>
-          <h1>日報詳細</h1>
-          <Link href="/dashboard" className={styles.backLink}>
-            ← ダッシュボードに戻る
-          </Link>
+        <div className={styles.headerLeft}>
+          <img src="/logo.png" alt="ロゴ" className={styles.headerLogo} />
+          <div>
+            <h1>日報詳細</h1>
+            <Link href="/dashboard" className={styles.backLink}>
+              ← ダッシュボードに戻る
+            </Link>
+          </div>
         </div>
       </div>
 

@@ -65,11 +65,14 @@ export default function SubmitReport() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div>
-          <h1>日報を提出する</h1>
-          <Link href="/trainee/dashboard" className={styles.backLink}>
-            ← ダッシュボードに戻る
-          </Link>
+        <div className={styles.headerLeft}>
+          <img src="/logo.png" alt="ロゴ" className={styles.headerLogo} />
+          <div>
+            <h1>日報を提出する</h1>
+            <Link href="/trainee/dashboard" className={styles.backLink}>
+              ← ダッシュボードに戻る
+            </Link>
+          </div>
         </div>
         <button
           className={styles.logoutButton}
